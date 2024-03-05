@@ -3,5 +3,16 @@ The objective of this repository is help you for taking the Certified Terraform 
 
 # Exam
 
-MCQ's exam foramt 1 hour 57 - 60 questions. 
+Multiple choice exam
+1 hour 
+57 - 60 questions
+Price: $70.50 USD
+Online Proctored
+2 Years (Validity)
+
+Official Prep Link:
+https://developer.hashicorp.com/terraform/tutorials/certification-003
+
+Tutorials link for Assocaite:
+https://developer.hashicorp.com/terraform/tutorials/certification-associate-tutorials-003
 
