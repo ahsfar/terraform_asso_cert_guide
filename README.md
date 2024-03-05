@@ -10,9 +10,7 @@ Price: $70.50 USD
 Online Proctored
 2 Years (Validity)
 
-Official Prep Link:
-https://developer.hashicorp.com/terraform/tutorials/certification-003
+[Official Terraform Associate Preparation Link](https://developer.hashicorp.com/terraform/tutorials/certification-003)
 
-Tutorials link for Assocaite:
-https://developer.hashicorp.com/terraform/tutorials/certification-associate-tutorials-003
 
+[Tutorials link for Terraform Assocaite](https://developer.hashicorp.com/terraform/tutorials/certification-associate-tutorials-003).
