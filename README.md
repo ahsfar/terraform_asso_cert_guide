@@ -1,0 +1,1 @@
+# terraform_asso_cert_guide
