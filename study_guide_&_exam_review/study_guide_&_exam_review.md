@@ -40,6 +40,10 @@ https://developer.hashicorp.com/terraform/intro/v1.1.x/use-cases
 
 # 3. Understand Terraform basics
 
+## Study Guide Links Objective 3
+
+links...
+
 <details><summary>Understand Terraform basics</summary>
 <p>
 
@@ -53,6 +57,10 @@ https://developer.hashicorp.com/terraform/intro/v1.1.x/use-cases
 </details>
 
 # 4. Use Terraform outside the core workflow
+
+## Study Guide Links Objective 4
+
+links...
 
 <details><summary>Use Terraform outside the core workflow</summary>
 <p>
@@ -68,6 +76,10 @@ https://developer.hashicorp.com/terraform/intro/v1.1.x/use-cases
 
 # 5. Interact with Terraform modules
 
+## Study Guide Links Objective 5
+
+links...
+
 <details><summary>Interact with Terraform modules</summary>
 <p>
 
@@ -81,6 +93,10 @@ https://developer.hashicorp.com/terraform/intro/v1.1.x/use-cases
 </details>
 
 # 6. Use the core Terraform workflow
+
+## Study Guide Links Objective 6
+
+links...
 
 <details><summary>	Use the core Terraform workflow</summary>
 <p>
@@ -97,6 +113,10 @@ https://developer.hashicorp.com/terraform/intro/v1.1.x/use-cases
 
 # 7. Describe state locking
 
+## Study Guide Links Objective 7
+
+links...
+
 <details><summary>Describe state locking</summary>
 <p>
 
@@ -111,6 +131,10 @@ https://developer.hashicorp.com/terraform/intro/v1.1.x/use-cases
 
 # 8. Read, generate, and modify configuration
 
+## Study Guide Links Objective 8
+
+links...
+
 <details><summary>Read, generate, and modify configuration</summary>
 <p>
 
@@ -124,6 +148,10 @@ https://developer.hashicorp.com/terraform/intro/v1.1.x/use-cases
 </details>
 
 # 9. Understand Terraform Cloud capabilities
+
+## Study Guide Links Objective 9
+
+links...
 
 <details><summary>Understand Terraform Cloud capabilities</summary>
 <p>
