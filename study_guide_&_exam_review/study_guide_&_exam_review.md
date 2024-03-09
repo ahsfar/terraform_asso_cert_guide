@@ -3,6 +3,14 @@
 
 # 1. Understand Infrastructure as Code (IaC) concepts
 
+## Study Guide Links Objective 1 & 2
+
+https://www.hashicorp.com/resources/what-is-infrastructure-as-code
+https://developer.hashicorp.com/terraform/intro
+https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code
+https://www.hashicorp.com/blog/infrastructure-as-code-in-a-private-or-public-cloud
+https://developer.hashicorp.com/terraform/intro/v1.1.x/use-cases
+
 
 <details><summary>Understand Infrastructure as Code (IaC) concepts</summary>
 <p>
@@ -21,6 +29,8 @@
 <details><summary>Understand the purpose of Terraform (vs other IaC)</summary>
 <p>
 
+### 2 a
+
 ```bash
 
 ```
@@ -32,6 +42,8 @@
 
 <details><summary>Understand Terraform basics</summary>
 <p>
+
+### 3 a
 
 ```bash
 
@@ -45,6 +57,8 @@
 <details><summary>Use Terraform outside the core workflow</summary>
 <p>
 
+### 4 a
+
 ```bash
 
 ```
@@ -57,6 +71,8 @@
 <details><summary>Interact with Terraform modules</summary>
 <p>
 
+### 5 a
+
 ```bash
 
 ```
@@ -68,6 +84,8 @@
 
 <details><summary>	Use the core Terraform workflow</summary>
 <p>
+
+### 6 a
 
 ```bash
 
@@ -82,6 +100,8 @@
 <details><summary>Describe state locking</summary>
 <p>
 
+### 7 a
+
 ```bash
 
 ```
@@ -94,6 +114,8 @@
 <details><summary>Read, generate, and modify configuration</summary>
 <p>
 
+### 8 a
+
 ```bash
 
 ```
@@ -105,6 +127,8 @@
 
 <details><summary>Understand Terraform Cloud capabilities</summary>
 <p>
+
+### 9 a
 
 ```bash
 
