@@ -16,7 +16,7 @@
 <p>
 
 ### 1a. Explain what IaC is
-[1](https://developer.hashicorp.com/terraform/intro)[2](https://www.hashicorp.com/blog/infrastructure-as-code-in-a-private-or-public-cloud)
+[What is Terraform?](https://developer.hashicorp.com/terraform/intro)[Infrastructure as Code in a Private or Public Cloud](https://www.hashicorp.com/blog/infrastructure-as-code-in-a-private-or-public-cloud)
 
 IaC (Infrastructure as Code) - Managing infrastructure using code and configuration files. Enables automation, scalability, and collaboration. Provides consistency, reproducibility, and simplifies resource management.
 
