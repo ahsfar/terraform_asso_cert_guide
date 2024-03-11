@@ -15,10 +15,6 @@
 <details><summary>Review: Understand Infrastructure as Code (IaC) concepts</summary>
 <p>
 
-```bash
-
-```
-
 ### 1a. Explain what IaC is
 
 IaC (Infrastructure as Code) - Managing infrastructure using code and configuration files. Enables automation, scalability, and collaboration. Provides consistency, reproducibility, and simplifies resource management.
@@ -35,10 +31,6 @@ Automation, Consistency, Scalability, Reproducibility, Collaboration, Testing an
 <details><summary>Review: Understand the purpose of Terraform (vs other IaC)</summary>
 <p>
 
-
-```bash
-
-```
 ### 2a	Explain multi-cloud and provider-agnostic benefits
 
 Terraform simplifies multi-cloud infrastructure management and orchestration, enabling fault-tolerance and consistent workflows across multiple cloud providers.
@@ -58,7 +50,9 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 
 ## Study Guide: Review Terraform fundamentals
 
-links...
+[Title]()
+[Title]()
+[Title]()
 
 <details><summary>Review: Understand Terraform basics</summary>
 <p>
@@ -82,7 +76,9 @@ links...
 
 ## Study Guide: Learn more subcommands
 
-links...
+[Title]()
+[Title]()
+[Title]()
 
 <details><summary>Review: Use Terraform outside the core workflow</summary>
 <p>
@@ -104,7 +100,9 @@ links...
 
 ## Study Guide: Use and create modules
 
-links...
+[Title]()
+[Title]()
+[Title]()
 
 <details><summary>Review: Interact with Terraform modules</summary>
 <p>
@@ -129,7 +127,9 @@ links...
 
 ## Study Guide: Navigate the core workflow
 
-links...
+[Title]()
+[Title]()
+[Title]()
 
 <details><summary>Review: Use the core Terraform workflow</summary>
 <p>
@@ -161,7 +161,9 @@ links...
 
 ## Study Guide: Manage state
 
-links...
+[Title]()
+[Title]()
+[Title]()
 
 <details><summary>Review: Describe state locking</summary>
 <p>
@@ -190,7 +192,9 @@ links...
 
 ## Study Guide: Read and write configuration
 
-links...
+[Title]()
+[Title]()
+[Title]()
 
 <details><summary>Review: Read, generate, and modify configuration</summary>
 <p>
@@ -219,7 +223,9 @@ links...
 
 ## Study Guide: Understand Terraform Cloud
 
-links...
+[Title]()
+[Title]()
+[Title]()
 
 <details><summary>Review: Understand Terraform Cloud capabilities</summary>
 <p>
