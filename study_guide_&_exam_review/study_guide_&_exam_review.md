@@ -15,13 +15,12 @@
 <details><summary>Review: Understand Infrastructure as Code (IaC) concepts</summary>
 <p>
 
-### 1a. Explain what IaC is
-[What is Terraform?](https://developer.hashicorp.com/terraform/intro)
-[Infrastructure as Code in a Private or Public Cloud](https://www.hashicorp.com/blog/infrastructure-as-code-in-a-private-or-public-cloud)
+### 1a. [Explain what IaC is](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=1a-,Explain%20what%20IaC%20is,-What%20is%20Terraform)
+
 
 IaC (Infrastructure as Code) - Managing infrastructure using code and configuration files. Enables automation, scalability, and collaboration. Provides consistency, reproducibility, and simplifies resource management.
 
-### 1b. Describe advantages of IaC patterns
+### 1b. [Describe advantages of IaC patterns](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=1a-,Explain%20what%20IaC%20is,-What%20is%20Terraform)
 
 Automation, Consistency, Scalability, Reproducibility, Collaboration, Testing and Validation, Auditing and Compliance, Rapid Deployment & Disaster Recovery
 
