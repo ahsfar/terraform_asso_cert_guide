@@ -21,9 +21,11 @@ https://developer.hashicorp.com/terraform/intro/v1.1.x/use-cases
 
 ### 1a. Explain what IaC is
 
+IaC (Infrastructure as Code) - Managing infrastructure using code and configuration files. Enables automation, scalability, and collaboration. Provides consistency, reproducibility, and simplifies resource management.
+
 ### 1b. Describe advantages of IaC patterns
 
-
+Automation, Consistency, Scalability, Reproducibility, Collaboration, Testing and Validation, Auditing and Compliance, Rapid Deployment & Disaster Recovery
 
 </p>
 </details>
