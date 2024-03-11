@@ -50,9 +50,16 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 
 ## Study Guide: Review Terraform fundamentals
 
-[Title]()
-[Title]()
-[Title]()
+[Get Started with Terraform - Tutorials](https://developer.hashicorp.com/terraform/tutorials/aws-get-started)
+[Purpose of Terraform State - Doc](https://developer.hashicorp.com/terraform/language/v1.1.x/state/purpose)
+[Terraform Settings - Doc](https://developer.hashicorp.com/terraform/language/v1.1.x/settings)
+[Manage Terraform Versions - Tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/versions)
+[Providers Summary - Doc](https://developer.hashicorp.com/terraform/language/v1.1.x/providers)
+[How Terraform Works with Plugins - Doc](https://developer.hashicorp.com/terraform/plugin/how-terraform-works)
+[Provider Configuration - Doc](https://developer.hashicorp.com/terraform/language/v1.1.x/providers/configuration)
+[Lock and Upgrade Provider Versions - Tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/provider-versioning)
+[Dependency Lock File - Doc](https://developer.hashicorp.com/terraform/language/v1.1.x/files/dependency-lock)
+
 
 <details><summary>Review: Understand Terraform basics</summary>
 <p>
