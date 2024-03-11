@@ -65,13 +65,13 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 <details><summary>Review: Understand Terraform basics</summary>
 <p>
 
-### 3a.	[Install and version Terraform providers]()
+### 3a.	[Install and version Terraform providers](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Install%20and%20version%20Terraform%20providers)
 
-### 3b.	[Describe plugin-based architecture]()
+### 3b.	[Describe plugin-based architecture](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20plugin%2Dbased%20architecture)
 
-### 3c.	[Write Terraform configuration using multiple providers]()
+### 3c.	[Write Terraform configuration using multiple providers](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Write%20Terraform%20configuration%20using%20multiple%20providers)
 
-### 3d.	[Describe how Terraform finds and fetches providers]()
+### 3d.	[Describe how Terraform finds and fetches providers](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20how%20Terraform%20finds%20and%20fetches%20providers)
 
 ```bash
 
@@ -95,11 +95,11 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 
 ```
 
-### 4a.	[Describe when to use terraform import to import existing infrastructure into your Terraform state]()
+### 4a.	[Describe when to use terraform import to import existing infrastructure into your Terraform state](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20when%20to%20use%20terraform%20import%20to%20import%20existing%20infrastructure%20into%20your%20Terraform%20state)
 
-### 4b.	[Use terraform state to view Terraform state]()
+### 4b.	[Use terraform state to view Terraform state](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Use%20terraform%20state%20to%20view%20Terraform%20state)
 
-### 4c.	[Describe when to enable verbose logging and what the outcome/value is]()
+### 4c.	[Describe when to enable verbose logging and what the outcome/value is](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20when%20to%20enable%20verbose%20logging%20and%20what%20the%20outcome/value%20is)
 
 </p>
 </details>
@@ -118,13 +118,13 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 ```bash
 
 ```
-### 5a.	[Contrast and use different module source options including the public Terraform Registry]()
+### 5a.	[Contrast and use different module source options including the public Terraform Registry](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Contrast%20and%20use%20different%20module%20source%20options%20including%20the%20public%20Terraform%20Registry)
 
-### 5b.	[Interact with module inputs and outputs]()
+### 5b.	[Interact with module inputs and outputs](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Interact%20with%20module%20inputs%20and%20outputs)
 
-### 5c.	[Describe variable scope within modules/child modules]()
+### 5c.	[Describe variable scope within modules/child modules](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20variable%20scope%20within%20modules/child%20modules)
 
-### 5d.	[Set module version]()
+### 5d.	[Set module version](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=5d-,Set%20module%20version,-Module%20Versions)
 
 
 
@@ -146,19 +146,19 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 
 ```
 
-### 6a. [Describe Terraform workflow ( Write -> Plan -> Create )	]()
+### 6a. [Describe Terraform workflow ( Write -> Plan -> Create )	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20Terraform%20workflow%20(%20Write%20%2D%3E%20Plan%20%2D%3E%20Create%20))
 
-### 6b. [Initialize a Terraform working directory (terraform init)	]()
+### 6b. [Initialize a Terraform working directory (terraform init)	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Initialize%20a%20Terraform%20working%20directory%20(terraform%20init))
 
-### 6c. [Validate a Terraform configuration (terraform validate)	]()
+### 6c. [Validate a Terraform configuration (terraform validate)	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Validate%20a%20Terraform%20configuration%20(terraform%20validate))
 
-### 6d. [Generate and review an execution plan for Terraform (terraform plan)	 ]()
+### 6d. [Generate and review an execution plan for Terraform (terraform plan)	 ](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Generate%20and%20review%20an%20execution%20plan%20for%20Terraform%20(terraform%20plan))
 
-### 6e. [Execute changes to infrastructure with Terraform (terraform apply)	]()
+### 6e. [Execute changes to infrastructure with Terraform (terraform apply)	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Execute%20changes%20to%20infrastructure%20with%20Terraform%20(terraform%20apply))
 
-### 6f. [Destroy Terraform managed infrastructure (terraform destroy)	]()
+### 6f. [Destroy Terraform managed infrastructure (terraform destroy)	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Destroy%20Terraform%20managed%20infrastructure%20(terraform%20destroy))
 
-### 6g. [Apply formatting and style adjustments to a configuration (terraform fmt)	]()
+### 6g. [Apply formatting and style adjustments to a configuration (terraform fmt)	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Apply%20formatting%20and%20style%20adjustments%20to%20a%20configuration%20(terraform%20fmt))
 
 
 </p>
@@ -179,19 +179,19 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 ```bash
 
 ```
-### 7a. [Describe default local backend	]()
+### 7a. [Describe default local backend	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20default%20local%20backend)
 
-### 7b. [Describe state locking		]()
+### 7b. [Describe state locking		](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20state%20locking)
 
-### 7c. [Handle backend and cloud integration authentication methods	]()
+### 7c. [Handle backend and cloud integration authentication methods	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Handle%20backend%20and%20cloud%20integration%20authentication%20methods)
 
-### 7d. [Differentiate remote state back end options]()
+### 7d. [Differentiate remote state back end options](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Differentiate%20remote%20state%20back%20end%20options)
 
-### 7e. [Manage resource drift and Terraform state]()
+### 7e. [Manage resource drift and Terraform state](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Manage%20resource%20drift%20and%20Terraform%20state)
 
-### 7f. [Describe backend block and cloud integration in configuration]()
+### 7f. [Describe backend block and cloud integration in configuration](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20backend%20block%20and%20cloud%20integration%20in%20configuration)
 
-### 7g. [Understand secret management in state files]()
+### 7g. [Understand secret management in state files](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Understand%20secret%20management%20in%20state%20files)
 
 </p>
 </details>
@@ -210,19 +210,19 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 ```bash
 
 ```
-### 8a. [Demonstrate use of variables and outputs]()
+### 8a. [Demonstrate use of variables and outputs](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Demonstrate%20use%20of%20variables%20and%20outputs)
 
-### 8b. [Describe secure secret injection best practice]()
+### 8b. [Describe secure secret injection best practice](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20secure%20secret%20injection%20best%20practice)
 
-### 8c. [Understand the use of collection and structural types]()
+### 8c. [Understand the use of collection and structural types](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Understand%20the%20use%20of%20collection%20and%20structural%20types)
 
-### 8d. [Create and differentiate resource and data configuration]()
+### 8d. [Create and differentiate resource and data configuration](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Create%20and%20differentiate%20resource%20and%20data%20configuration)
 
-### 8e. [Use resource addressing and resource parameters to connect resources together]()
+### 8e. [Use resource addressing and resource parameters to connect resources together](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Use%20resource%20addressing%20and%20resource%20parameters%20to%20connect%20resources%20together)
 
-### 8f. [Use HCL and Terraform functions to write configuration]()
+### 8f. [Use HCL and Terraform functions to write configuration](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Use%20HCL%20and%20Terraform%20functions%20to%20write%20configuration)
 
-### 8g. [Describe built-in dependency management (order of execution based)]()
+### 8g. [Describe built-in dependency management (order of execution based)](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20built%2Din%20dependency%20management%20(order%20of%20execution%20based))
 
 </p>
 </details>
@@ -242,9 +242,9 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 
 ```
 
-### 9a. [Explain how Terraform Cloud helps to manage infrastructure]() 
+### 9a. [Explain how Terraform Cloud helps to manage infrastructure](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Explain%20how%20Terraform%20Cloud%20helps%20to%20manage%20infrastructure) 
 
-### 9b. [Describe how Terraform Cloud enables collaboration and governance]()
+### 9b. [Describe how Terraform Cloud enables collaboration and governance](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20how%20Terraform%20Cloud%20enables%20collaboration%20and%20governance)
 
 </p>
 </details> 
