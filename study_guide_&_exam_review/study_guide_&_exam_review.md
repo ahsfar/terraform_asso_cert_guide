@@ -3,7 +3,7 @@
 
 # 1. Understand Infrastructure as Code (IaC) concepts
 
-## Study Guide Links Objective 1 & 2
+## Study Guide: Learn about Infrastructure as Code (IaC)
 
 https://www.hashicorp.com/resources/what-is-infrastructure-as-code
 https://developer.hashicorp.com/terraform/intro
@@ -48,7 +48,7 @@ https://developer.hashicorp.com/terraform/intro/v1.1.x/use-cases
 
 # 3. Understand Terraform basics
 
-## Study Guide Links Objective 3
+## Study Guide: Review Terraform fundamentals
 
 links...
 
@@ -72,7 +72,7 @@ links...
 
 # 4. Use Terraform outside the core workflow
 
-## Study Guide Links Objective 4
+## Study Guide: Learn more subcommands
 
 links...
 
@@ -94,7 +94,7 @@ links...
 
 # 5. Interact with Terraform modules
 
-## Study Guide Links Objective 5
+## Study Guide: Use and create modules
 
 links...
 
@@ -119,7 +119,7 @@ links...
 
 # 6. Use the core Terraform workflow
 
-## Study Guide Links Objective 6
+## Study Guide: Navigate the core workflow
 
 links...
 
@@ -151,7 +151,7 @@ links...
 
 # 7. Describe state locking
 
-## Study Guide Links Objective 7
+## Study Guide: Manage state
 
 links...
 
@@ -180,7 +180,7 @@ links...
 
 # 8. Read, generate, and modify configuration
 
-## Study Guide Links Objective 8
+## Study Guide: Read and write configuration
 
 links...
 
@@ -209,7 +209,7 @@ links...
 
 # 9. Understand Terraform Cloud capabilities
 
-## Study Guide Links Objective 9
+## Study Guide: Understand Terraform Cloud
 
 links...
 
