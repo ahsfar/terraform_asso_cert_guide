@@ -32,11 +32,11 @@ Automation, Consistency, Scalability, Reproducibility, Collaboration, Testing an
 <details><summary>Review: Understand the purpose of Terraform (vs other IaC)</summary>
 <p>
 
-### 2a.	Explain multi-cloud and provider-agnostic benefits
+### 2a.	[Explain multi-cloud and provider-agnostic benefits](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Explain%20multi%2Dcloud%20and%20provider%2Dagnostic%20benefits)
 
 Terraform simplifies multi-cloud infrastructure management and orchestration, enabling fault-tolerance and consistent workflows across multiple cloud providers.
 
-### 2b.	Explain the benefits of state
+### 2b.	[Explain the benefits of state](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Explain%20the%20benefits%20of%20state)
 
 - Mapping to the Real World: State allows Terraform to map configuration to actual resources, ensuring accurate representation and management.
 - Metadata Tracking: State tracks resource dependencies and retains information about the order of destruction, enabling correct operation during resource deletion.
