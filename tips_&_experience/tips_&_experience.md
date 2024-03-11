@@ -2,7 +2,7 @@
 
 ## Terraform Exam Tips
 
-Following or some helpful tips I've noticed while preparing for Terraform Associate Certfication.
+Following are some helpful tips I've noticed while preparing for Terraform Associate Certfication.
 
 ## 1. Labs
 
@@ -10,11 +10,14 @@ Straight away do some labs setting up basic infrastructure (AWS recommended)
 
 ## 2. Official Documentation
 
+Go through the provided study guide (includes videos, docs, tutorials) and do the below practice exams at the same time.
 
 ## 3 Practice Exam Questions
 
+Recommended:
+https://www.udemy.com/course/terraform-associate-practice-exam/?couponCode=LETSLEARNNOW
 
-
+---
 
 #  Experience
 
@@ -23,4 +26,5 @@ Straight away do some labs setting up basic infrastructure (AWS recommended)
 PSI Online Proctored
 
 ## 2. Environment
+
 
