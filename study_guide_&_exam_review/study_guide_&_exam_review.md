@@ -31,11 +31,11 @@ Automation, Consistency, Scalability, Reproducibility, Collaboration, Testing an
 <details><summary>Review: Understand the purpose of Terraform (vs other IaC)</summary>
 <p>
 
-### 2a	Explain multi-cloud and provider-agnostic benefits
+### 2a.	Explain multi-cloud and provider-agnostic benefits
 
 Terraform simplifies multi-cloud infrastructure management and orchestration, enabling fault-tolerance and consistent workflows across multiple cloud providers.
 
-### 2b	Explain the benefits of state
+### 2b.	Explain the benefits of state
 
 - Mapping to the Real World: State allows Terraform to map configuration to actual resources, ensuring accurate representation and management.
 - Metadata Tracking: State tracks resource dependencies and retains information about the order of destruction, enabling correct operation during resource deletion.
@@ -64,13 +64,13 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 <details><summary>Review: Understand Terraform basics</summary>
 <p>
 
-### 3a	Install and version Terraform providers
+### 3a.	Install and version Terraform providers
 
-### 3b	Describe plugin-based architecture
+### 3b.	Describe plugin-based architecture
 
-### 3c	Write Terraform configuration using multiple providers
+### 3c.	Write Terraform configuration using multiple providers
 
-### 3d	Describe how Terraform finds and fetches providers
+### 3d.	Describe how Terraform finds and fetches providers
 
 ```bash
 
@@ -94,11 +94,11 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 
 ```
 
-### 4a	Describe when to use terraform import to import existing infrastructure into your Terraform state
+### 4a.	Describe when to use terraform import to import existing infrastructure into your Terraform state
 
-### 4b	Use terraform state to view Terraform state
+### 4b.	Use terraform state to view Terraform state
 
-### 4c	Describe when to enable verbose logging and what the outcome/value is
+### 4c.	Describe when to enable verbose logging and what the outcome/value is
 
 </p>
 </details>
@@ -117,13 +117,13 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 ```bash
 
 ```
-### 5a	Contrast and use different module source options including the public Terraform Registry
+### 5a.	Contrast and use different module source options including the public Terraform Registry
 
-### 5b	Interact with module inputs and outputs
+### 5b.	Interact with module inputs and outputs
 
-### 5c	Describe variable scope within modules/child modules
+### 5c.	Describe variable scope within modules/child modules
 
-### 5d	Set module version
+### 5d.	Set module version
 
 
 
@@ -145,19 +145,19 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 
 ```
 
-### 6a Describe Terraform workflow ( Write -> Plan -> Create )	
+### 6a. Describe Terraform workflow ( Write -> Plan -> Create )	
 
-### 6b Initialize a Terraform working directory (terraform init)	
+### 6b. Initialize a Terraform working directory (terraform init)	
 
-### 6c Validate a Terraform configuration (terraform validate)	
+### 6c. Validate a Terraform configuration (terraform validate)	
 
-### 6d Generate and review an execution plan for Terraform (terraform plan)	 
+### 6d. Generate and review an execution plan for Terraform (terraform plan)	 
 
-### 6e Execute changes to infrastructure with Terraform (terraform apply)	
+### 6e. Execute changes to infrastructure with Terraform (terraform apply)	
 
-### 6f Destroy Terraform managed infrastructure (terraform destroy)	
+### 6f. Destroy Terraform managed infrastructure (terraform destroy)	
 
-### 6g Apply formatting and style adjustments to a configuration (terraform fmt)	
+### 6g. Apply formatting and style adjustments to a configuration (terraform fmt)	
 
 
 </p>
@@ -178,19 +178,19 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 ```bash
 
 ```
-### 7a Describe default local backend	
+### 7a. Describe default local backend	
 
-### 7b Describe state locking		
+### 7b. Describe state locking		
 
-### 7c Handle backend and cloud integration authentication methods	
+### 7c. Handle backend and cloud integration authentication methods	
 
-### 7d Differentiate remote state back end options
+### 7d. Differentiate remote state back end options
 
-### 7e Manage resource drift and Terraform state
+### 7e. Manage resource drift and Terraform state
 
-### 7f Describe backend block and cloud integration in configuration
+### 7f. Describe backend block and cloud integration in configuration
 
-### 7g Understand secret management in state files
+### 7g. Understand secret management in state files
 
 </p>
 </details>
@@ -209,19 +209,19 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 ```bash
 
 ```
-### 8a 	Demonstrate use of variables and outputs
+### 8a. 	Demonstrate use of variables and outputs
 
-### 8b Describe secure secret injection best practice
+### 8b. Describe secure secret injection best practice
 
-### 8c Understand the use of collection and structural types
+### 8c. Understand the use of collection and structural types
 
-### 8d Create and differentiate resource and data configuration
+### 8d. Create and differentiate resource and data configuration
 
-### 8e Use resource addressing and resource parameters to connect resources together
+### 8e. Use resource addressing and resource parameters to connect resources together
 
-### 8f Use HCL and Terraform functions to write configuration
+### 8f. Use HCL and Terraform functions to write configuration
 
-### 8g 	Describe built-in dependency management (order of execution based)
+### 8g. 	Describe built-in dependency management (order of execution based)
 
 </p>
 </details>
@@ -241,9 +241,9 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 
 ```
 
-### 9a Explain how Terraform Cloud helps to manage infrastructure 
+### 9a. Explain how Terraform Cloud helps to manage infrastructure 
 
-### 9b Describe how Terraform Cloud enables collaboration and governance
+### 9b. Describe how Terraform Cloud enables collaboration and governance
 
 </p>
 </details> 
