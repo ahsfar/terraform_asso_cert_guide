@@ -5,11 +5,11 @@
 
 ## Study Guide: Learn about Infrastructure as Code (IaC)
 
-https://www.hashicorp.com/resources/what-is-infrastructure-as-code
-https://developer.hashicorp.com/terraform/intro
-https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code
-https://www.hashicorp.com/blog/infrastructure-as-code-in-a-private-or-public-cloud
-https://developer.hashicorp.com/terraform/intro/v1.1.x/use-cases
+[Recommended Practice Exams](https://www.hashicorp.com/resources/what-is-infrastructure-as-code)
+[Recommended Practice Exams](https://developer.hashicorp.com/terraform/intro)
+[Recommended Practice Exams](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code)
+[Recommended Practice Exams](https://www.hashicorp.com/blog/infrastructure-as-code-in-a-private-or-public-cloud)
+[Recommended Practice Exams](https://developer.hashicorp.com/terraform/intro/v1.1.x/use-cases)
 
 
 <details><summary>Review: Understand Infrastructure as Code (IaC) concepts</summary>
