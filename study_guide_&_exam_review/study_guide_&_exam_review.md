@@ -12,7 +12,7 @@ https://www.hashicorp.com/blog/infrastructure-as-code-in-a-private-or-public-clo
 https://developer.hashicorp.com/terraform/intro/v1.1.x/use-cases
 
 
-<details><summary>Understand Infrastructure as Code (IaC) concepts</summary>
+<details><summary>Review: Understand Infrastructure as Code (IaC) concepts</summary>
 <p>
 
 ```bash
@@ -30,7 +30,7 @@ https://developer.hashicorp.com/terraform/intro/v1.1.x/use-cases
 
 # 2. Understand the purpose of Terraform (vs other IaC)
 
-<details><summary>Understand the purpose of Terraform (vs other IaC)</summary>
+<details><summary>Review: Understand the purpose of Terraform (vs other IaC)</summary>
 <p>
 
 
@@ -52,7 +52,7 @@ https://developer.hashicorp.com/terraform/intro/v1.1.x/use-cases
 
 links...
 
-<details><summary>Understand Terraform basics</summary>
+<details><summary>Review: Understand Terraform basics</summary>
 <p>
 
 ### 3a	Install and version Terraform providers
@@ -76,7 +76,7 @@ links...
 
 links...
 
-<details><summary>Use Terraform outside the core workflow</summary>
+<details><summary>Review: Use Terraform outside the core workflow</summary>
 <p>
 
 ```bash
@@ -98,7 +98,7 @@ links...
 
 links...
 
-<details><summary>Interact with Terraform modules</summary>
+<details><summary>Review: Interact with Terraform modules</summary>
 <p>
 
 ```bash
@@ -123,7 +123,7 @@ links...
 
 links...
 
-<details><summary>	Use the core Terraform workflow</summary>
+<details><summary>Review: Use the core Terraform workflow</summary>
 <p>
 
 ```bash
@@ -155,7 +155,7 @@ links...
 
 links...
 
-<details><summary>Describe state locking</summary>
+<details><summary>Review: Describe state locking</summary>
 <p>
 
 ```bash
@@ -184,7 +184,7 @@ links...
 
 links...
 
-<details><summary>Read, generate, and modify configuration</summary>
+<details><summary>Review: Read, generate, and modify configuration</summary>
 <p>
 
 ```bash
@@ -213,7 +213,7 @@ links...
 
 links...
 
-<details><summary>Understand Terraform Cloud capabilities</summary>
+<details><summary>Review: Understand Terraform Cloud capabilities</summary>
 <p>
 
 ```bash
