@@ -1,5 +1,5 @@
 # Certified Terraform Assocaite
-The objective of this repository is help you for taking the Certified Terraform Assocaite using official exam guide.
+The objective of this repository is help you for taking the Certified Terraform Assocaite using official exam guide and some other online resources (optional).
 
 # Exam
 
