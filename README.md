@@ -1,6 +1,8 @@
 # Certified Terraform Assocaite
 The objective of this repository is help you for taking the Certified Terraform Assocaite using official exam guide and some other online resources (optional).
 
+I've added all the study guide links and links to exam review (for links) section wise together.
+
 # Exam
 
 Multiple choice exam
