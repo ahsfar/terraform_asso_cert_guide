@@ -14,10 +14,11 @@ Go through the provided study guide (includes videos, docs, tutorials) and do th
 
 ## 3 Practice Exam Questions
 
-Recommended:
-https://www.udemy.com/course/terraform-associate-practice-exam/?couponCode=LETSLEARNNOW
+[Recommended Practice Exams](https://www.udemy.com/course/terraform-associate-practice-exam/?couponCode=LETSLEARNNOW)
+
 
 ---
+
 
 #  Experience
 
