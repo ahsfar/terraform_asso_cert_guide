@@ -5,8 +5,8 @@ I've added all the study guide links and links to exam review (for links) sectio
 
 # Exam
 
--> Multiple choice exam
--> 1 hour 
+- Multiple choice exam
+- 1 hour 
 - 57 - 60 questions
 - Price: $70.50 USD
 - Online Proctored
