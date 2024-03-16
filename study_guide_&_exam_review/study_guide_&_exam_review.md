@@ -143,14 +143,14 @@ terraform {
 
 ```
 
-Terraform configurations can have external dependencies: providers and modules.
-Dependency lock file (.terraform.lock.hcl) tracks provider dependencies.
-Lock file is created and updated automatically by Terraform during 'terraform init'.
-Lock file ensures consistent selection of provider versions.
-Changes to lock file should be reviewed and committed to version control.
-Checksum verification ensures package integrity.
-Trust on first use approach for new providers.
-Lock file changes can occur when adding new provider dependencies.
+- Terraform configurations can have external dependencies: providers and modules.
+- Dependency lock file (.terraform.lock.hcl) tracks provider dependencies.
+- Lock file is created and updated automatically by Terraform during 'terraform init'.
+- Lock file ensures consistent selection of provider versions.
+- Changes to lock file should be reviewed and committed to version control.
+- Checksum verification ensures package integrity.
+- Trust on first use approach for new providers.
+- Lock file changes can occur when adding new provider dependencies.
 
 ### 3b.	[Describe plugin-based architecture](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20plugin%2Dbased%20architecture)
 
