@@ -67,6 +67,55 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 
 ### 3a.	[Install and version Terraform providers](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Install%20and%20version%20Terraform%20providers)
 
+- Providers in Terraform enable interaction with various cloud providers and APIs.
+- Provider configurations are defined in the root module of the Terraform configuration.
+- Configuration arguments specific to each provider are specified within a provider block.
+- Expressions can be used in configuration arguments, but only with values known before applying the configuration.
+- Multiple configurations for the same provider can be defined using alias meta-argument, useful for targeting different regions or environments.
+- Default provider configurations are used when the provider is not explicitly configured for a resource.
+- References to alternate provider configurations are in the form <PROVIDER NAME>.<ALIAS>.
+- Alternate provider configurations can be selected for resources and modules using the provider meta-argument.
+- The version meta-argument for provider configurations is deprecated and should be declared in the required_providers block instead.
+
+
+```bash
+provider "google" {
+  project = "acme-app"
+  region  = "us-central1"
+}
+
+```
+
+
+```bash
+# The default provider configuration; resources that begin with `aws_` will use
+# it as the default, and it can be referenced as `aws`.
+provider "aws" {
+  region = "us-east-1"
+}
+
+# Additional provider configuration for west coast region; resources can
+# reference this as `aws.west`.
+provider "aws" {
+  alias  = "west"
+  region = "us-west-2"
+}
+
+```
+
+```bash
+terraform {
+  required_providers {
+    mycloud = {
+      source  = "mycorp/mycloud"
+      version = "~> 1.0"
+      configuration_aliases = [ mycloud.alternate ]
+    }
+  }
+}
+
+```
+
 ### 3b.	[Describe plugin-based architecture](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20plugin%2Dbased%20architecture)
 
 ### 3c.	[Write Terraform configuration using multiple providers](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Write%20Terraform%20configuration%20using%20multiple%20providers)
