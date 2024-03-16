@@ -116,7 +116,45 @@ terraform {
 
 ```
 
+- The "terraform" block in Terraform configuration is used to configure Terraform's behavior.
+- The block can contain settings related to Terraform Cloud, backend configuration, required Terraform version, provider requirements, experimental language -features, and provider metadata.
+- The "required_version" setting specifies the version constraint for the Terraform CLI.
+- The "required_providers" block specifies the providers required by the module, including version constraints and source addresses.
+- Experimental language features can be enabled using the "experiments" argument.
+- Provider metadata can be passed using the "provider_meta" block.
+- Care should be taken when using experimental features in production modules.
+
+```bash
+terraform {
+  required_providers {
+    aws = {
+      version = ">= 2.7.0"
+      source = "hashicorp/aws"
+    }
+  }
+}
+
+```
+
+```bash
+terraform {
+  experiments = [example]
+}
+
+```
+
+Terraform configurations can have external dependencies: providers and modules.
+Dependency lock file (.terraform.lock.hcl) tracks provider dependencies.
+Lock file is created and updated automatically by Terraform during 'terraform init'.
+Lock file ensures consistent selection of provider versions.
+Changes to lock file should be reviewed and committed to version control.
+Checksum verification ensures package integrity.
+Trust on first use approach for new providers.
+Lock file changes can occur when adding new provider dependencies.
+
 ### 3b.	[Describe plugin-based architecture](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20plugin%2Dbased%20architecture)
+
+
 
 ### 3c.	[Write Terraform configuration using multiple providers](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Write%20Terraform%20configuration%20using%20multiple%20providers)
 
