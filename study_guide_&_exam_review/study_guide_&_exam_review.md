@@ -178,6 +178,30 @@ terraform {
 
 ### 3c.	[Write Terraform configuration using multiple providers](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Write%20Terraform%20configuration%20using%20multiple%20providers)
 
+
+- Provider configurations are declared in the root module of a Terraform configuration.
+- A provider configuration is defined using a provider block, specifying the provider's name and configuration arguments.
+- Multiple configurations for the same provider can be defined using the alias meta-argument.
+- Default provider configurations are used if no specific configuration is set for a resource.
+- Alternate provider configurations can be selected for specific resources or modules using the provider meta-argument.
+- The version meta-argument in provider configurations is deprecated and should be declared in the required_providers block instead.
+
+```bash
+# The default provider configuration; resources that begin with `aws_` will use
+# it as the default, and it can be referenced as `aws`.
+provider "aws" {
+  region = "us-east-1"
+}
+
+# Additional provider configuration for west coast region; resources can
+# reference this as `aws.west`.
+provider "aws" {
+  alias  = "west"
+  region = "us-west-2"
+}
+```
+
+
 ### 3d.	[Describe how Terraform finds and fetches providers](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20how%20Terraform%20finds%20and%20fetches%20providers)
 
 ```bash
