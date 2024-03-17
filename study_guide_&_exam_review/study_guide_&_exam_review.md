@@ -1,4 +1,4 @@
-# Study Guide (In Progress)
+# Study Guide
 
 
 # 1. Understand Infrastructure as Code (IaC) concepts
