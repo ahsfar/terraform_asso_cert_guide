@@ -204,8 +204,22 @@ provider "aws" {
 
 ### 3d.	[Describe how Terraform finds and fetches providers](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20how%20Terraform%20finds%20and%20fetches%20providers)
 
-```bash
 
+- Terraform finds and fetches providers during the terraform init command.
+- It looks for provider configurations in the Terraform configuration files.
+- Providers are declared using the required_providers block.
+- Terraform checks the providers declared in the configuration against the installed providers.
+- If a provider is not installed or doesn't match the required version, Terraform fetches and installs the correct version.
+Example:
+- The Terraform configuration specifies required_providers for AWS and Google Cloud.
+- During terraform init, Terraform checks if the required providers are installed.
+- If not installed or the version doesn't match, Terraform fetches and installs the correct versions for AWS and Google Cloud providers.
+  
+```bash
+provider "google" {
+  project = "acme-app"
+  region  = "us-central1"
+}
 ```
 
 </p>
