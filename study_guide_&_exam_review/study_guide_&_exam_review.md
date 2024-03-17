@@ -445,24 +445,126 @@ module "consul" {
 <details><summary>Review: Use the core Terraform workflow</summary>
 <p>
 
-```bash
 
-```
 
 ### 6a. [Describe Terraform workflow ( Write -> Plan -> Create )	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20Terraform%20workflow%20(%20Write%20%2D%3E%20Plan%20%2D%3E%20Create%20))
 
+Write: Author infrastructure configuration using Terraform's declarative language.
+
+```bash
+# Create repository
+$ git init my-infra && cd my-infra
+
+Initialized empty Git repository in /.../my-infra/.git/
+
+# Write initial config
+$ vim main.tf
+
+# Initialize Terraform
+$ terraform init
+
+Initializing provider plugins...
+# ...
+Terraform has been successfully initialized!
+
+# Make edits to config
+$ vim main.tf
+
+# Review plan
+$ terraform plan
+
+# Make additional edits, and repeat
+$ vim main.tf
+
+```
+
+Plan: Analyze the configuration and generate an execution plan.
+
+```bash
+git add main.tf
+git commit -m 'Managing infrastructure as code!'
+```
+Create: Apply the plan and provision the infrastructure accordingly.
+
+```bash
+terraform apply
+
+Do you want to perform these actions?
+
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+  Enter a value: yes
+
+# ...
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+```
+
 ### 6b. [Initialize a Terraform working directory (terraform init)	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Initialize%20a%20Terraform%20working%20directory%20(terraform%20init))
+
+
+The terraform init command initializes a Terraform working directory by setting up the necessary dependencies and configurations for managing infrastructure.
+
+```bash
+terraform init [options]
+```
 
 ### 6c. [Validate a Terraform configuration (terraform validate)	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Validate%20a%20Terraform%20configuration%20(terraform%20validate))
 
+The terraform validate command checks the syntax and consistency of Terraform configuration files without accessing remote services, and it can be used as a post-save check in a text editor or as a test step in a CI system. Example: terraform validate -json
+
+```bash
+terraform validate [options]
+```
+
 ### 6d. [Generate and review an execution plan for Terraform (terraform plan)	 ](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Generate%20and%20review%20an%20execution%20plan%20for%20Terraform%20(terraform%20plan))
+
+The terraform plan command in Terraform creates an execution plan to preview changes to infrastructure. It compares the current configuration to the prior state, proposes actions to align them, and helps verify changes before applying them. 
+
+For example, running terraform plan can show you the resources that will be created, modified, or deleted when deploying a new infrastructure stack.
+
+```bash
+terraform plan [options]
+
+terraform plan -var 'name=value'
+
+terraform plan -out=FILENAME
+```
 
 ### 6e. [Execute changes to infrastructure with Terraform (terraform apply)	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Execute%20changes%20to%20infrastructure%20with%20Terraform%20(terraform%20apply))
 
+The terraform apply command in Terraform applies the changes proposed in a Terraform plan, either by automatically creating a new plan or by applying a saved plan file. 
+
+For example, running terraform apply can deploy infrastructure resources defined in Terraform configuration files to a cloud provider such as AWS, Azure, or GCP.
+
+```bash
+terraform apply [options] [plan file]
+
+```
+
 ### 6f. [Destroy Terraform managed infrastructure (terraform destroy)	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Destroy%20Terraform%20managed%20infrastructure%20(terraform%20destroy))
+
+The terraform destroy command in Terraform is used to conveniently destroy all remote objects managed by a Terraform configuration. It is commonly used to clean up temporary or development infrastructure. 
+
+For example, running terraform destroy can remove cloud resources provisioned by Terraform, such as virtual machines or storage buckets, once they are no longer needed.
+
+```bash
+terraform destroy [options]
+
+terraform plan -destroy
+
+```
 
 ### 6g. [Apply formatting and style adjustments to a configuration (terraform fmt)	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Apply%20formatting%20and%20style%20adjustments%20to%20a%20configuration%20(terraform%20fmt))
 
+The terraform fmt command in Terraform is used to format and style Terraform configuration files to ensure consistency and readability. It applies predefined style conventions and can be used to maintain industry best practices for Terraform code.
+
+For example, running terraform fmt can automatically format configuration files to match a standard style guide, making it easier for teams to collaborate and maintain code quality.
+
+```bash
+terraform fmt [options] [DIR]
+```
 
 </p>
 </details>
@@ -479,22 +581,115 @@ module "consul" {
 <details><summary>Review: Describe state locking</summary>
 <p>
 
+
+### 7a. [Describe default local backend	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20default%20local%20backend)
+
+The backends in Terraform determine where state snapshots are stored, allowing for remote collaboration and access to sensitive information while managing infrastructure resources.
+
+The local backend stores state on the local filesystem, locks that state using system APIs, and performs operations locally.
+
 ```bash
+terraform {
+  backend "local" {
+    path = "relative/path/to/terraform.tfstate"
+  }
+}
 
 ```
-### 7a. [Describe default local backend	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20default%20local%20backend)
+
+```bash
+data "terraform_remote_state" "foo" {
+  backend = "local"
+
+  config = {
+    path = "${path.module}/../../terraform.tfstate"
+  }
+}
+
+```
 
 ### 7b. [Describe state locking		](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20state%20locking)
 
+State locking in Terraform ensures data integrity by preventing multiple simultaneous writes to the state file, minimizing the risk of corruption. It is an industry best practice to enable state locking for collaborative environments. 
+
+For example, when multiple team members are working on the same infrastructure, state locking prevents conflicts and ensures consistent resource management.
+
 ### 7c. [Handle backend and cloud integration authentication methods	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Handle%20backend%20and%20cloud%20integration%20authentication%20methods)
+
+The terraform login command allows users to automatically obtain and securely store API tokens for Terraform Cloud, Terraform Enterprise, or other Terraform services.
+
+```bash
+terraform login [hostname]
+```
 
 ### 7d. [Differentiate remote state back end options](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Differentiate%20remote%20state%20back%20end%20options)
 
+Backends in Terraform determine where state snapshots are stored, enabling remote collaboration and secure management of infrastructure resources.
+
 ### 7e. [Manage resource drift and Terraform state](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Manage%20resource%20drift%20and%20Terraform%20state)
+
+Refresh-Only Mode in Terraform Cloud helps reconcile Terraform state with manually modified cloud resources, ensuring accurate representation without making any changes to the infrastructure.
+
+```bash
+terraform plan -refresh-only
+# or
+terraform apply -refresh-only
+```
 
 ### 7f. [Describe backend block and cloud integration in configuration](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20backend%20block%20and%20cloud%20integration%20in%20configuration)
 
+
+#### Backend Block:
+
+- Defines where Terraform state snapshots are stored.
+- Enables remote storage for state, allowing multiple team members to work on the same infrastructure.
+- Example: Configuring an S3 backend to store the state file in an S3 bucket.
+
+#### Cloud Integration:
+
+- Refers to integrating Terraform with Terraform Cloud, a service provided by HashiCorp.
+- Enables management of infrastructure and collaboration using Terraform.
+- Provides features like remote state management, workspace management, and collaboration tools.
+- Example: Configuring the Terraform Cloud backend to connect to a Terraform Cloud workspace for remote state management and team collaboration.
+
+```bash
+terraform {
+  cloud {
+    organization = "example_corp"
+    ## Required for Terraform Enterprise; Defaults to app.terraform.io for Terraform Cloud
+    hostname = "app.terraform.io"
+
+    workspaces {
+      tags = ["app"]
+    }
+  }
+}
+
+```
+
+```bash
+# Using a backend block
+
+terraform {
+  backend "remote" {
+    organization = "example_corp"
+
+    workspaces {
+      name = "my-app-prod"
+    }
+  }
+}
+
+```
+
 ### 7g. [Understand secret management in state files](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Understand%20secret%20management%20in%20state%20files)
+
+- Terraform state files can contain sensitive data, such as passwords or private keys.
+- Treat the state file itself as sensitive data if it includes any sensitive information.
+- Storing state remotely provides better security, with options for encryption at rest.
+- Terraform Cloud and Terraform Enterprise offer additional security features like encryption, access control, and audit logging.
+- Use appropriate measures, such as IAM policies and TLS connections, to protect sensitive data in remote state backends.
+
 
 </p>
 </details>
