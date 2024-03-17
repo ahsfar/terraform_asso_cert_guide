@@ -7,7 +7,7 @@ I've added all the study guide links and links to exam review (for links) sectio
 
 - Multiple choice exam
 - 1 hour 
-- 57 - 60 questions
+- 57 Q's
 - Price: $70.50 USD
 - Online Proctored
 - 2 Years (Validity)
