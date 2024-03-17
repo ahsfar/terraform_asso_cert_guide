@@ -236,9 +236,7 @@ provider "google" {
 <details><summary>Review: Use Terraform outside the core workflow</summary>
 <p>
 
-```bash
 
-```
 
 ### 4a.	[Describe when to use terraform import to import existing infrastructure into your Terraform state](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20when%20to%20use%20terraform%20import%20to%20import%20existing%20infrastructure%20into%20your%20Terraform%20state)
 
@@ -268,7 +266,26 @@ terraform import 'aws_instance.baz["example"]' i-abcd1234
 
 ### 4b.	[Use terraform state to view Terraform state](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Use%20terraform%20state%20to%20view%20Terraform%20state)
 
+
+- The terraform state command is used for advanced state management in Terraform.
+- It allows you to view and modify the Terraform state without directly modifying the state file.
+- The command has several subcommands that provide different functionalities.
+- The subcommands can be used with both local state and remote state.
+- When modifying the state, Terraform automatically creates backup files, and the path of these backup files can be controlled using the -backup option.
+- Read-only subcommands, like list, do not write any backup files.
+- The output and command-line structure of the terraform state subcommands are designed to be compatible with Unix command-line tools such as grep and awk.
+- You can combine terraform state subcommands with other command-line tools for advanced filtering and modification of the state.
+
+```bash
+terraform state <subcommand> [options] [args]
+```
+
 ### 4c.	[Describe when to enable verbose logging and what the outcome/value is](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20when%20to%20enable%20verbose%20logging%20and%20what%20the%20outcome/value%20is)
+
+
+```bash
+
+```
 
 </p>
 </details>
