@@ -154,7 +154,27 @@ terraform {
 
 ### 3b.	[Describe plugin-based architecture](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20plugin%2Dbased%20architecture)
 
+- Terraform relies on plugins called providers to interact with various cloud providers, SaaS providers, and APIs.
+- Providers add resource types and data sources that Terraform can manage.
+- Providers are separate from Terraform and have their own release cadence and version numbers.
+- The Terraform Registry hosts publicly available providers for different infrastructure platforms.
+- Each provider has its own documentation, including resource types and arguments.
+- Providers are declared in the Terraform configuration and can have specific settings.
+- Providers are installed during initialization by Terraform Cloud, Terraform Enterprise, or the Terraform CLI.
+- A dependency lock file ensures consistent provider versions and can be created using the CLI.
+- The lock file should be committed to version control with the configuration.
+- The Terraform Registry is the main source to find providers categorized as Official, Partner, Community, or Archived.
 
+--
+
+- Terraform is built on a plugin-based architecture.
+- Terraform Core is the command line tool and communicates with Terraform Plugins using remote procedure calls (RPC).
+- Terraform Plugins provide implementations for specific services or provisioners.
+- Provider Plugins handle infrastructure provider-specific tasks such as authentication and defining resources.
+- Provisioner Plugins execute commands or scripts on resources.
+- Plugin discovery is performed during the terraform init command.
+- Terraform compares installed plugins to configuration version constraints and selects the appropriate version.
+- Plugins can be upgraded using the terraform init -upgrade command.
 
 ### 3c.	[Write Terraform configuration using multiple providers](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Write%20Terraform%20configuration%20using%20multiple%20providers)
 
