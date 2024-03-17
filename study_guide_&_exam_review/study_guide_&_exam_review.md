@@ -242,6 +242,30 @@ provider "google" {
 
 ### 4a.	[Describe when to use terraform import to import existing infrastructure into your Terraform state](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20when%20to%20use%20terraform%20import%20to%20import%20existing%20infrastructure%20into%20your%20Terraform%20state)
 
+You can use the terraform import command to import existing infrastructure into your Terraform state in the following scenarios:
+
+- Transitioning from manual provisioning: If you have existing infrastructure that was created outside of Terraform and you want to start managing it with Terraform, you can use terraform import to bring those resources under Terraform's management.
+
+- Migrating between Terraform states: If you have resources that were previously managed by a different Terraform state file or configuration, you can use terraform import to import those resources into your current Terraform state.
+
+- Reconstructing state file: If you accidentally deleted or lost your Terraform state file, but the infrastructure still exists, you can use terraform import to reconstruct the state by importing the existing resources.
+
+- Collaboration with an existing infrastructure: If you join a team or project where infrastructure was already provisioned manually or with another tool, you can use terraform import to incorporate that existing infrastructure into your Terraform configuration and state.
+
+Note: When using terraform import, ensure that you import each resource only once and associate it with the correct resource address. Importing the same object multiple times can lead to unwanted behavior in Terraform.
+
+It's important to note that terraform import imports resources into the state file, but it doesn't generate the corresponding Terraform configuration. You'll need to manually define the resource block in your Terraform configuration to match the imported resource.
+
+```bash
+terraform import aws_instance.foo i-abcd1234
+
+terraform import module.foo.aws_instance.bar i-abcd1234
+
+terraform import 'aws_instance.baz[0]' i-abcd1234
+
+terraform import 'aws_instance.baz["example"]' i-abcd1234
+```
+
 ### 4b.	[Use terraform state to view Terraform state](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Use%20terraform%20state%20to%20view%20Terraform%20state)
 
 ### 4c.	[Describe when to enable verbose logging and what the outcome/value is](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20when%20to%20enable%20verbose%20logging%20and%20what%20the%20outcome/value%20is)
