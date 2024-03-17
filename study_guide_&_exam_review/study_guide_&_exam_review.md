@@ -12,6 +12,7 @@
 [Introduction to Infrastructure as Code with Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code)
 
 [Infrastructure as Code in a Private or Public Cloud - Blog](https://www.hashicorp.com/blog/infrastructure-as-code-in-a-private-or-public-cloud)
+
 [Terraform Use Cases - Doc](https://developer.hashicorp.com/terraform/intro/v1.1.x/use-cases)
 
 
@@ -55,15 +56,22 @@ Terraform simplifies multi-cloud infrastructure management and orchestration, en
 ## Study Guide: Review Terraform fundamentals
 
 [Get Started with Terraform - Tutorials](https://developer.hashicorp.com/terraform/tutorials/aws-get-started)
-[Purpose of Terraform State - Doc](https://developer.hashicorp.com/terraform/language/v1.1.x/state/purpose)
-[Terraform Settings - Doc](https://developer.hashicorp.com/terraform/language/v1.1.x/settings)
-[Manage Terraform Versions - Tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/versions)
-[Providers Summary - Doc](https://developer.hashicorp.com/terraform/language/v1.1.x/providers)
-[How Terraform Works with Plugins - Doc](https://developer.hashicorp.com/terraform/plugin/how-terraform-works)
-[Provider Configuration - Doc](https://developer.hashicorp.com/terraform/language/v1.1.x/providers/configuration)
-[Lock and Upgrade Provider Versions - Tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/provider-versioning)
-[Dependency Lock File - Doc](https://developer.hashicorp.com/terraform/language/v1.1.x/files/dependency-lock)
 
+[Purpose of Terraform State - Doc](https://developer.hashicorp.com/terraform/language/v1.1.x/state/purpose)
+
+[Terraform Settings - Doc](https://developer.hashicorp.com/terraform/language/v1.1.x/settings)
+
+[Manage Terraform Versions - Tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/versions)
+
+[Providers Summary - Doc](https://developer.hashicorp.com/terraform/language/v1.1.x/providers)
+
+[How Terraform Works with Plugins - Doc](https://developer.hashicorp.com/terraform/plugin/how-terraform-works)
+
+[Provider Configuration - Doc](https://developer.hashicorp.com/terraform/language/v1.1.x/providers/configuration)
+
+[Lock and Upgrade Provider Versions - Tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/provider-versioning)
+
+[Dependency Lock File - Doc](https://developer.hashicorp.com/terraform/language/v1.1.x/files/dependency-lock)
 
 <details><summary>Review: Understand Terraform basics</summary>
 <p>
@@ -103,7 +111,6 @@ provider "aws" {
   alias  = "west"
   region = "us-west-2"
 }
-
 ```
 
 ```bash
@@ -116,7 +123,6 @@ terraform {
     }
   }
 }
-
 ```
 
 - The "terraform" block in Terraform configuration is used to configure Terraform's behavior.
@@ -136,14 +142,12 @@ terraform {
     }
   }
 }
-
 ```
 
 ```bash
 terraform {
   experiments = [example]
 }
-
 ```
 
 - Terraform configurations can have external dependencies: providers and modules.
@@ -207,7 +211,6 @@ provider "aws" {
 
 ### 3d.	[Describe how Terraform finds and fetches providers](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20how%20Terraform%20finds%20and%20fetches%20providers)
 
-
 - Terraform finds and fetches providers during the terraform init command.
 - It looks for provider configurations in the Terraform configuration files.
 - Providers are declared using the required_providers block.
@@ -233,15 +236,19 @@ provider "google" {
 ## Study Guide: Learn more subcommands
 
 [Command: state - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/state)
+
 [Manage Resources in Terraform State - tutorial](https://developer.hashicorp.com/terraform/tutorials/state/state-cli)
+
 [Command: import - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/import)
+
 [Import usage tips - documentation](https://developer.hashicorp.com/terraform/cli/import/usage)
+
 [Debugging Terraform - documentation](https://developer.hashicorp.com/terraform/internals/v1.1.x/debugging)
+
 [Troubleshoot Terraform - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/troubleshooting-workflow#enable-terraform-logging)
 
 <details><summary>Review: Use Terraform outside the core workflow</summary>
 <p>
-
 
 
 ### 4a.	[Describe when to use terraform import to import existing infrastructure into your Terraform state](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20when%20to%20use%20terraform%20import%20to%20import%20existing%20infrastructure%20into%20your%20Terraform%20state)
@@ -272,7 +279,6 @@ terraform import 'aws_instance.baz["example"]' i-abcd1234
 
 ### 4b.	[Use terraform state to view Terraform state](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Use%20terraform%20state%20to%20view%20Terraform%20state)
 
-
 - The terraform state command is used for advanced state management in Terraform.
 - It allows you to view and modify the Terraform state without directly modifying the state file.
 - The command has several subcommands that provide different functionalities.
@@ -297,7 +303,6 @@ terraform state <subcommand> [options] [args]
 - Enabling verbose logging helps in diagnosing issues, understanding Terraform's internal behavior, and identifying potential errors or misconfigurations.
 - When encountering a bug or issue with Terraform, including the detailed log, preferably using a service like gist, can provide valuable information for troubleshooting and resolving the problem.
 
-
 </p>
 </details>
 
@@ -306,18 +311,23 @@ terraform state <subcommand> [options] [args]
 ## Study Guide: Use and create modules
 
 [Reuse Configuration with Modules - (complete all tutorials)](https://developer.hashicorp.com/terraform/tutorials/modules)
-[Finding and Using Modules - documentation](https://developer.hashicorp.com/terraform/registry/modules/use)
-[Module versioning - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/modules/syntax#version)
-[Input Variables - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/values/variables)
-[Input Variables - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/variables)
-[Output Values - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/values/outputs)
-[Output Values - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/outputs)
-[Calling a Child Module - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/modules/syntax)
 
+[Finding and Using Modules - documentation](https://developer.hashicorp.com/terraform/registry/modules/use)
+
+[Module versioning - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/modules/syntax#version)
+
+[Input Variables - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/values/variables)
+
+[Input Variables - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/variables)
+
+[Output Values - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/values/outputs)
+
+[Output Values - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/outputs)
+
+[Calling a Child Module - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/modules/syntax)
 
 <details><summary>Review: Interact with Terraform modules</summary>
 <p>
-
 
 ### 5a.	[Contrast and use different module source options including the public Terraform Registry](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Contrast%20and%20use%20different%20module%20source%20options%20including%20the%20public%20Terraform%20Registry)
 
@@ -330,9 +340,7 @@ terraform state <subcommand> [options] [args]
 - Modules in the registry are versioned using semantic versioning.
 - Specify module version constraints to avoid breaking changes.
 
-
 ### 5b.	[Interact with module inputs and outputs](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Interact%20with%20module%20inputs%20and%20outputs)
-
 
 - Input variables in Terraform allow customization of modules without modifying their source code.
 - Variables are declared using a variable block with a unique name, type, and optional default value.
@@ -369,7 +377,6 @@ variable "docker_ports" {
     }
   ]
 }
-
 ```
 
 ```bash
@@ -377,7 +384,6 @@ variable "image_id" {
   type        = string
   description = "The id of the machine image (AMI) to use for the server."
 }
-
 ```
 
 - Modules in Terraform are containers for multiple resources used together.
@@ -422,8 +428,6 @@ terraform plan -replace=module.example.aws_instance.example
 - Child modules can access variables from their parent module by using the module namespace. For example, module.parent_module.variable_name.
 - Variables defined within a child module are scoped to that module and can be accessed within the child module's resources and configuration elements.
 
-
-
 ### 5d.	[Set module version](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=5d-,Set%20module%20version,-Module%20Versions)
 
 To set the module version, use the "version" argument within the module block.
@@ -439,9 +443,7 @@ module "consul" {
 
   servers = 3
 }
-
 ```
-
 
 </p>
 </details>
@@ -451,21 +453,29 @@ module "consul" {
 ## Study Guide: Navigate the core workflow
 
 [The Core Terraform Workflow - documentation](https://developer.hashicorp.com/terraform/intro/v1.1.x/core-workflow)
+
 [Initialize a Terraform working directory with init - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/init)
+
 [Initialize Terraform Configuration - tutorial](https://developer.hashicorp.com/terraform/tutorials/cli/init)
+
 [Validate a Terraform configuration with validate - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/validate)
+
 [Command: plan - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/plan)
+
 [Create a Terraform Plan - tutorial](https://developer.hashicorp.com/terraform/tutorials/cli/plan)
+
 [Command: apply - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/apply)
+
 [Apply Terraform Configuration - tutorial](https://developer.hashicorp.com/terraform/tutorials/cli/apply)
+
 [Command: destroy - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/destroy)
+
 [Command: fmt - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/fmt)
+
 [Troubleshoot Terraform - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/troubleshooting-workflow#format-the-configuration)
 
 <details><summary>Review: Use the core Terraform workflow</summary>
 <p>
-
-
 
 ### 6a. [Describe Terraform workflow ( Write -> Plan -> Create )	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20Terraform%20workflow%20(%20Write%20%2D%3E%20Plan%20%2D%3E%20Create%20))
 
@@ -495,7 +505,6 @@ $ terraform plan
 
 # Make additional edits, and repeat
 $ vim main.tf
-
 ```
 
 Plan: Analyze the configuration and generate an execution plan.
@@ -514,15 +523,12 @@ Do you want to perform these actions?
   Terraform will perform the actions described above.
   Only 'yes' will be accepted to approve.
   Enter a value: yes
-
 # ...
 
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
-
 ```
 
 ### 6b. [Initialize a Terraform working directory (terraform init)	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Initialize%20a%20Terraform%20working%20directory%20(terraform%20init))
-
 
 The terraform init command initializes a Terraform working directory by setting up the necessary dependencies and configurations for managing infrastructure.
 
@@ -596,26 +602,40 @@ terraform fmt [options] [DIR]
 
 #### State management:
 [State Locking - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/state/locking)
+
 [Protect Sensitive Input Variables - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/sensitive-variables#sensitive-values-in-state)
+
 [Sensitive Data in State - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/state/sensitive-data)
+
 [Refresh-Only Mode - documentation](https://developer.hashicorp.com/terraform/cloud-docs/run/modes-and-options#refresh-only-mode)
+
 [Use Refresh-Only Mode to Sync Terraform State - tutorial](https://developer.hashicorp.com/terraform/tutorials/state/refresh)
+
 [Manage Resource Drift - tutorial](https://developer.hashicorp.com/terraform/tutorials/state/resource-drift)
+
 [Manage Resources in Terraform State - tutorial](https://developer.hashicorp.com/terraform/tutorials/state/state-cli)
+
 #### Backend management:
 [Command: login - documentation](https://developer.hashicorp.com/terraform/cli/commands/login)
+
 [Log in to Terraform Cloud from the CLI - tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-login)
+
 [Backends - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/settings/backends)
+
 [Local backend - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/settings/backends/local)
+
 [Backend configuration - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/settings/backends/configuration)
+
 [Terraform Cloud Configuration - documentation](https://developer.hashicorp.com/terraform/language/settings/terraform-cloud)
+
 [Create a Workspace - tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-workspace-create)
+
 [Store Remote State - tutorial](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-remote)
+
 [Migrate State to Terraform Cloud - tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-migrate#set-up-the-remote-backend)
 
 <details><summary>Review: Describe state locking</summary>
 <p>
-
 
 ### 7a. [Describe default local backend	](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20default%20local%20backend)
 
@@ -629,7 +649,6 @@ terraform {
     path = "relative/path/to/terraform.tfstate"
   }
 }
-
 ```
 
 ```bash
@@ -640,7 +659,6 @@ data "terraform_remote_state" "foo" {
     path = "${path.module}/../../terraform.tfstate"
   }
 }
-
 ```
 
 ### 7b. [Describe state locking		](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20state%20locking)
@@ -673,7 +691,6 @@ terraform apply -refresh-only
 
 ### 7f. [Describe backend block and cloud integration in configuration](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20backend%20block%20and%20cloud%20integration%20in%20configuration)
 
-
 #### Backend Block:
 
 - Defines where Terraform state snapshots are stored.
@@ -699,7 +716,6 @@ terraform {
     }
   }
 }
-
 ```
 
 ```bash
@@ -714,7 +730,6 @@ terraform {
     }
   }
 }
-
 ```
 
 ### 7g. [Understand secret management in state files](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Understand%20secret%20management%20in%20state%20files)
@@ -725,7 +740,6 @@ terraform {
 - Terraform Cloud and Terraform Enterprise offer additional security features like encryption, access control, and audit logging.
 - Use appropriate measures, such as IAM policies and TLS connections, to protect sensitive data in remote state backends.
 
-
 </p>
 </details>
 
@@ -734,23 +748,35 @@ terraform {
 ## Study Guide: Read and write configuration
 
 [Resources - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/resources)
+
 [Resource Addressing - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/state/resource-addressing)
+
 [References Named Values - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/expressions/references)
+
 [Data Sources - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/data-sources)
+
 [Query Data Sources - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/data-sources)
+
 [Create Resource Dependencies - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/dependencies)
+
 [Resource Graph - documentation](https://developer.hashicorp.com/terraform/internals/v1.1.x/graph)
+
 [Target Resources - tutorial](https://developer.hashicorp.com/terraform/tutorials/state/resource-targeting)
+
 [Complex Types - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/expressions/type-constraints#complex-types)
+
 [Built-in Functions - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/functions)
+
 [Perform Dynamic Operations with Functions - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/functions)
+
 [Create Dynamic Expressions - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/expressions)
+
 [Inject Secrets into Terraform Using the Vault Provider - tutorial](https://developer.hashicorp.com/terraform/tutorials/secrets/secrets-vault)
+
 [Vault Provider for Terraform - documentation](https://registry.terraform.io/providers/hashicorp/vault/latest/docs)
 
 <details><summary>Review: Read, generate, and modify configuration</summary>
 <p>
-
 
 ### 8a. [Demonstrate use of variables and outputs](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Demonstrate%20use%20of%20variables%20and%20outputs)
 
@@ -812,7 +838,6 @@ resource "aws_instance" "web" {
   ami           = "ami-a1b2c3d4"
   instance_type = "t2.micro"
 }
-
 ```
 
 #### Data Configuration:
@@ -863,7 +888,6 @@ data "aws_ami" "example" {
 12
 
 min([55, 2453, 2]...)
-
 ```
 
 ### 8g. [Describe built-in dependency management (order of execution based)](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20built%2Din%20dependency%20management%20(order%20of%20execution%20based))
@@ -884,15 +908,25 @@ min([55, 2453, 2]...)
 ## Study Guide: Understand Terraform Cloud
 
 [What is Terraform Cloud? - documentation](https://developer.hashicorp.com/terraform/cloud-docs)
+
 [Terraform Cloud Workflow - documentation](https://developer.hashicorp.com/terraform/cloud-docs/overview#terraform-workflow)
+
 [Terraform Cloud Workspaces - documentation](https://developer.hashicorp.com/terraform/cloud-docs/workspaces)
+
 [Terraform Cloud Get Started Collection - tutorials](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started)
+
 [Manage Versions in Terraform Cloud - tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-versions)
+
 [Use Modules from the Registry - tutorial](https://developer.hashicorp.com/terraform/tutorials/modules/module-use)
+
 [Private Registry - documentation](https://developer.hashicorp.com/terraform/cloud-docs/registry)
+
 [Terraform Cloud Teams - documentation](https://developer.hashicorp.com/terraform/cloud-docs/users-teams-organizations/teams)
+
 [Manage Permissions in Terraform Cloud - tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-permissions)
+
 [Sentinel - documentation](https://developer.hashicorp.com/terraform/cloud-docs/policy-enforcement/sentinel)
+
 [Enforce a Policy - tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/policy-quickstart)
 
 <details><summary>Review: Understand Terraform Cloud capabilities</summary>
