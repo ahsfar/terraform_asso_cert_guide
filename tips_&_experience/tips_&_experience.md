@@ -24,8 +24,11 @@ Go through the provided study guide (includes videos, docs, tutorials) and do th
 
 ## 1. Exam 
 
-PSI Online Proctored
+- PSI Online Proctored
+- I got 57 Questions. Started 10 minutes late but was able to finish within 30 minutes. Passed with 92%.
+
 
 ## 2. Environment
 
+PSI experience was pretty smooth passed my exam today got the score on the PSI browser. Waiting for official score or cert. Found exam easy making sure you know the basics mostly.
 
