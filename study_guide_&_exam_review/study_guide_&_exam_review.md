@@ -282,10 +282,15 @@ terraform state <subcommand> [options] [args]
 
 ### 4c.	[Describe when to enable verbose logging and what the outcome/value is](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20when%20to%20enable%20verbose%20logging%20and%20what%20the%20outcome/value%20is)
 
+- Enable verbose logging in Terraform when you need detailed logs for debugging purposes.
+- Setting the TF_LOG environment variable to any value enables detailed logs to appear on stderr.
+- You can set TF_LOG to one of the log levels: TRACE, DEBUG, INFO, WARN, or ERROR to control the verbosity of the logs.
+- When TF_LOG is set to JSON, logs are output at the TRACE level or higher and use a parseable JSON encoding for formatting.
+- Enabling logging separately for Terraform itself and provider plugins can be done using the TF_LOG_CORE and TF_LOG_PROVIDER environment variables respectively.
+- The TF_LOG_PATH environment variable can be set to specify a file where the log output should be appended.
+- Enabling verbose logging helps in diagnosing issues, understanding Terraform's internal behavior, and identifying potential errors or misconfigurations.
+- When encountering a bug or issue with Terraform, including the detailed log, preferably using a service like gist, can provide valuable information for troubleshooting and resolving the problem.
 
-```bash
-
-```
 
 </p>
 </details>
@@ -301,17 +306,129 @@ terraform state <subcommand> [options] [args]
 <details><summary>Review: Interact with Terraform modules</summary>
 <p>
 
-```bash
 
-```
 ### 5a.	[Contrast and use different module source options including the public Terraform Registry](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Contrast%20and%20use%20different%20module%20source%20options%20including%20the%20public%20Terraform%20Registry)
+
+- The Terraform Registry allows easy module discovery through search and filtering.
+- Public registry modules are referenced using the syntax <NAMESPACE>/<NAME>/<PROVIDER>.
+- Usage instructions are provided on the registry page, including required inputs.
+- Modules are downloaded and cached using terraform init.
+- Private registry modules have an additional hostname prefix in the source string.
+- Configure credentials to access private registry modules.
+- Modules in the registry are versioned using semantic versioning.
+- Specify module version constraints to avoid breaking changes.
+
 
 ### 5b.	[Interact with module inputs and outputs](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Interact%20with%20module%20inputs%20and%20outputs)
 
+
+- Input variables in Terraform allow customization of modules without modifying their source code.
+- Variables are declared using a variable block with a unique name, type, and optional default value.
+- Optional arguments include default values, type constraints, descriptions, validations, sensitivity, and nullability.
+- Default values can be provided for variables, making them optional.
+- Type constraints enforce accepted value types, including strings, numbers, booleans, and complex types like collections and objects.
+- Input variable documentation provides a description of the variable's purpose and expected value.
+- Custom validation rules can be defined for variables using the validation block.
+- Sensitive variables can be marked as sensitive to prevent their values from being displayed in outputs.
+- The nullable argument allows controlling whether a variable can have a null value.
+- Other related topics include output values, local values, modules, and more.
+
+```bash
+variable "image_id" {
+  type = string
+}
+
+variable "availability_zone_names" {
+  type    = list(string)
+  default = ["us-west-1a"]
+}
+
+variable "docker_ports" {
+  type = list(object({
+    internal = number
+    external = number
+    protocol = string
+  }))
+  default = [
+    {
+      internal = 8300
+      external = 8300
+      protocol = "tcp"
+    }
+  ]
+}
+
+```
+
+```bash
+variable "image_id" {
+  type        = string
+  description = "The id of the machine image (AMI) to use for the server."
+}
+
+```
+
+- Modules in Terraform are containers for multiple resources used together.
+- Modules can be called from other modules using module blocks.
+- The source argument is mandatory and specifies the module's location.
+- The version argument can be used to constrain acceptable module versions.
+- Meta-arguments like count, for_each, providers, and depends_on provide additional functionality.
+- Module output values can be declared and accessed by the calling module.
+- Refactoring blocks can be used to preserve resource state when moving resources between modules.
+- The -replace option allows forcing the replacement of specific resource instances.
+
+```bash
+# calling child module
+module "servers" {
+  source = "./app-cluster"
+
+  servers = 5
+}
+
+# version
+module "consul" {
+  source  = "hashicorp/consul/aws"
+  version = "0.0.5"
+
+  servers = 3
+}
+
+# accessing module output values 
+resource "aws_elb" "example" {
+  # ...
+
+  instances = module.servers.instance_ids
+}
+
+# replacing resources within a module
+terraform plan -replace=module.example.aws_instance.example
+```
+
 ### 5c.	[Describe variable scope within modules/child modules](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20variable%20scope%20within%20modules/child%20modules)
+
+- Variables defined within a module are scoped to that module and can be accessed within the module's resources, data sources, and other configuration elements.
+- Child modules can access variables from their parent module by using the module namespace. For example, module.parent_module.variable_name.
+- Variables defined within a child module are scoped to that module and can be accessed within the child module's resources and configuration elements.
+
+
 
 ### 5d.	[Set module version](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=5d-,Set%20module%20version,-Module%20Versions)
 
+To set the module version, use the "version" argument within the module block.
+The "version" argument accepts a version constraint string.
+Terraform will use the newest installed version of the module that meets the constraint.
+Version constraints are supported for modules installed from a module registry.
+Local file path modules share the same version as their caller.
+
+```bash
+module "consul" {
+  source  = "hashicorp/consul/aws"
+  version = "0.0.5"
+
+  servers = 3
+}
+
+```
 
 
 </p>
