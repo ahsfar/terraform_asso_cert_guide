@@ -229,9 +229,12 @@ provider "google" {
 
 ## Study Guide: Learn more subcommands
 
-[Title]()
-[Title]()
-[Title]()
+[Command: state - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/state)
+[Manage Resources in Terraform State - tutorial](https://developer.hashicorp.com/terraform/tutorials/state/state-cli)
+[Command: import - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/import)
+[Import usage tips - documentation](https://developer.hashicorp.com/terraform/cli/import/usage)
+[Debugging Terraform - documentation](https://developer.hashicorp.com/terraform/internals/v1.1.x/debugging)
+[Troubleshoot Terraform - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/troubleshooting-workflow#enable-terraform-logging)
 
 <details><summary>Review: Use Terraform outside the core workflow</summary>
 <p>
@@ -299,9 +302,15 @@ terraform state <subcommand> [options] [args]
 
 ## Study Guide: Use and create modules
 
-[Title]()
-[Title]()
-[Title]()
+[Reuse Configuration with Modules - (complete all tutorials)](https://developer.hashicorp.com/terraform/tutorials/modules)
+[Finding and Using Modules - documentation](https://developer.hashicorp.com/terraform/registry/modules/use)
+[Module versioning - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/modules/syntax#version)
+[Input Variables - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/values/variables)
+[Input Variables - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/variables)
+[Output Values - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/values/outputs)
+[Output Values - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/outputs)
+[Calling a Child Module - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/modules/syntax)
+
 
 <details><summary>Review: Interact with Terraform modules</summary>
 <p>
@@ -438,9 +447,17 @@ module "consul" {
 
 ## Study Guide: Navigate the core workflow
 
-[Title]()
-[Title]()
-[Title]()
+[The Core Terraform Workflow - documentation](https://developer.hashicorp.com/terraform/intro/v1.1.x/core-workflow)
+[Initialize a Terraform working directory with init - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/init)
+[Initialize Terraform Configuration - tutorial](https://developer.hashicorp.com/terraform/tutorials/cli/init)
+[Validate a Terraform configuration with validate - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/validate)
+[Command: plan - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/plan)
+[Create a Terraform Plan - tutorial](https://developer.hashicorp.com/terraform/tutorials/cli/plan)
+[Command: apply - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/apply)
+[Apply Terraform Configuration - tutorial](https://developer.hashicorp.com/terraform/tutorials/cli/apply)
+[Command: destroy - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/destroy)
+[Command: fmt - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/fmt)
+[Troubleshoot Terraform - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/troubleshooting-workflow#format-the-configuration)
 
 <details><summary>Review: Use the core Terraform workflow</summary>
 <p>
@@ -574,9 +591,24 @@ terraform fmt [options] [DIR]
 
 ## Study Guide: Manage state
 
-[Title]()
-[Title]()
-[Title]()
+#### State management:
+[State Locking - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/state/locking)
+[Protect Sensitive Input Variables - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/sensitive-variables#sensitive-values-in-state)
+[Sensitive Data in State - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/state/sensitive-data)
+[Refresh-Only Mode - documentation](https://developer.hashicorp.com/terraform/cloud-docs/run/modes-and-options#refresh-only-mode)
+[Use Refresh-Only Mode to Sync Terraform State - tutorial](https://developer.hashicorp.com/terraform/tutorials/state/refresh)
+[Manage Resource Drift - tutorial](https://developer.hashicorp.com/terraform/tutorials/state/resource-drift)
+[Manage Resources in Terraform State - tutorial](https://developer.hashicorp.com/terraform/tutorials/state/state-cli)
+#### Backend management:
+[Command: login - documentation](https://developer.hashicorp.com/terraform/cli/commands/login)
+[Log in to Terraform Cloud from the CLI - tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-login)
+[Backends - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/settings/backends)
+[Local backend - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/settings/backends/local)
+[Backend configuration - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/settings/backends/configuration)
+[Terraform Cloud Configuration - documentation](https://developer.hashicorp.com/terraform/language/settings/terraform-cloud)
+[Create a Workspace - tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-workspace-create)
+[Store Remote State - tutorial](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-remote)
+[Migrate State to Terraform Cloud - tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-migrate#set-up-the-remote-backend)
 
 <details><summary>Review: Describe state locking</summary>
 <p>
@@ -698,9 +730,20 @@ terraform {
 
 ## Study Guide: Read and write configuration
 
-[Title]()
-[Title]()
-[Title]()
+[Resources - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/resources)
+[Resource Addressing - documentation](https://developer.hashicorp.com/terraform/cli/v1.1.x/state/resource-addressing)
+[References Named Values - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/expressions/references)
+[Data Sources - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/data-sources)
+[Query Data Sources - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/data-sources)
+[Create Resource Dependencies - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/dependencies)
+[Resource Graph - documentation](https://developer.hashicorp.com/terraform/internals/v1.1.x/graph)
+[Target Resources - tutorial](https://developer.hashicorp.com/terraform/tutorials/state/resource-targeting)
+[Complex Types - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/expressions/type-constraints#complex-types)
+[Built-in Functions - documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/functions)
+[Perform Dynamic Operations with Functions - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/functions)
+[Create Dynamic Expressions - tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/expressions)
+[Inject Secrets into Terraform Using the Vault Provider - tutorial](https://developer.hashicorp.com/terraform/tutorials/secrets/secrets-vault)
+[Vault Provider for Terraform - documentation](https://registry.terraform.io/providers/hashicorp/vault/latest/docs)
 
 <details><summary>Review: Read, generate, and modify configuration</summary>
 <p>
@@ -837,17 +880,17 @@ min([55, 2453, 2]...)
 
 ## Study Guide: Understand Terraform Cloud
 
-[What is Terraform Cloud? documentation](https://developer.hashicorp.com/terraform/cloud-docs)
-[Terraform Cloud Workflow documentation](https://developer.hashicorp.com/terraform/cloud-docs/overview#terraform-workflow)
-[Terraform Cloud Workspaces documentation](https://developer.hashicorp.com/terraform/cloud-docs/workspaces)
-[Terraform Cloud Get Started Collection tutorials](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started)
-[Manage Versions in Terraform Cloud tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-versions)
-[Use Modules from the Registry tutorial](https://developer.hashicorp.com/terraform/tutorials/modules/module-use)
-[Private Registry documentation](https://developer.hashicorp.com/terraform/cloud-docs/registry)
-[Terraform Cloud Teams documentation](https://developer.hashicorp.com/terraform/cloud-docs/users-teams-organizations/teams)
-[Manage Permissions in Terraform Cloud tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-permissions)
-[Sentinel documentation](https://developer.hashicorp.com/terraform/cloud-docs/policy-enforcement/sentinel)
-[Enforce a Policy tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/policy-quickstart)
+[What is Terraform Cloud? - documentation](https://developer.hashicorp.com/terraform/cloud-docs)
+[Terraform Cloud Workflow - documentation](https://developer.hashicorp.com/terraform/cloud-docs/overview#terraform-workflow)
+[Terraform Cloud Workspaces - documentation](https://developer.hashicorp.com/terraform/cloud-docs/workspaces)
+[Terraform Cloud Get Started Collection - tutorials](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started)
+[Manage Versions in Terraform Cloud - tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-versions)
+[Use Modules from the Registry - tutorial](https://developer.hashicorp.com/terraform/tutorials/modules/module-use)
+[Private Registry - documentation](https://developer.hashicorp.com/terraform/cloud-docs/registry)
+[Terraform Cloud Teams - documentation](https://developer.hashicorp.com/terraform/cloud-docs/users-teams-organizations/teams)
+[Manage Permissions in Terraform Cloud - tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-permissions)
+[Sentinel - documentation](https://developer.hashicorp.com/terraform/cloud-docs/policy-enforcement/sentinel)
+[Enforce a Policy - tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/policy-quickstart)
 
 <details><summary>Review: Understand Terraform Cloud capabilities</summary>
 <p>
