@@ -705,22 +705,130 @@ terraform {
 <details><summary>Review: Read, generate, and modify configuration</summary>
 <p>
 
-```bash
 
-```
 ### 8a. [Demonstrate use of variables and outputs](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Demonstrate%20use%20of%20variables%20and%20outputs)
+
+#### Variables:
+
+- Declare input variables using a variable block in Terraform configuration.
+- Customize aspects of modules by setting variable values using CLI options and environment variables.
+- Pass values to child modules using the module block.
+
+#### Outputs:
+
+- Declare output values using an output block in Terraform configuration.
+- Expose resource attributes or values from modules to be used in other configurations.
+- Access child module outputs using module.<MODULE NAME>.<OUTPUT NAME>.
+- Use optional arguments like description, sensitive, and depends_on to provide additional information or control the behavior of outputs.
 
 ### 8b. [Describe secure secret injection best practice](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20secure%20secret%20injection%20best%20practice)
 
+- Avoid hard-coding secrets directly in Terraform configuration files.
+- Use Vault provider for secure secret storage and retrieval.
+- Leverage Vault's dynamic secrets to generate short-lived credentials for resources.
+- Store secrets in Vault's encrypted storage, ensuring encryption at rest and in transit.
+- Implement access controls and policies to restrict who can access and manage secrets.
+- Utilize Vault's audit logging to monitor and track secret access.
+- Avoid printing or exposing secrets in logs or outputs.
+- Regularly rotate secrets and revoke unnecessary access.
+- Follow security best practices for securing the Terraform backend where state files are stored.
+
 ### 8c. [Understand the use of collection and structural types](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Understand%20the%20use%20of%20collection%20and%20structural%20types)
+
+#### Collection Types:
+
+- Collection types allow multiple values of one type to be grouped together as a single value.
+- The three collection types in Terraform are list, map, and set.
+- list(...) represents a sequence of values identified by consecutive whole numbers.
+- map(...) represents a collection of values where each is identified by a string label.
+- set(...) represents a collection of unique values without any secondary identifiers or ordering.
+
+#### Structural Types:
+
+- Structural types allow multiple values of different types to be grouped together as a single value.
+- The two structural types in Terraform are object and tuple.
+- object(...) represents a collection of named attributes, each with its own type.
+- tuple(...) represents a sequence of elements identified by consecutive whole numbers, with each element having its own type.
 
 ### 8d. [Create and differentiate resource and data configuration](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Create%20and%20differentiate%20resource%20and%20data%20configuration)
 
+#### Resource Configuration:
+
+- Resource configuration describes the infrastructure objects to be created or managed by Terraform.
+- Resource blocks are used to declare resources in the Terraform configuration.
+- Each resource block represents a specific infrastructure object, such as virtual networks or compute instances.
+- Resource blocks have a specific syntax and can include arguments and attributes.
+- Resource blocks define the desired state of the infrastructure and allow Terraform to create, update, or delete the corresponding objects.
+- Meta-arguments like depends_on, count, for_each, provider, and lifecycle can be used to customize the behavior of resource blocks.
+
+```bash
+resource "aws_instance" "web" {
+  ami           = "ami-a1b2c3d4"
+  instance_type = "t2.micro"
+}
+
+```
+
+#### Data Configuration:
+
+- Data configuration is used to retrieve information from external sources, such as APIs or other Terraform configurations.
+- Data sources provide a way to reference and use information defined outside of the current Terraform configuration.
+- Data blocks are used to declare data sources in the Terraform configuration.
+- Data blocks specify the type of data source and define the query constraints to retrieve the desired information.
+- Data sources are read-only and do not create or manage infrastructure objects.
+- Data sources can be referenced in other parts of the configuration to access the retrieved data.
+
+```bash
+data "aws_ami" "example" {
+  most_recent = true
+
+  owners = ["self"]
+  tags = {
+    Name   = "app-server"
+    Tested = "true"
+  }
+}
+```
+
 ### 8e. [Use resource addressing and resource parameters to connect resources together](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Use%20resource%20addressing%20and%20resource%20parameters%20to%20connect%20resources%20together)
+
+- Resource addressing uses a string called a resource address.
+- It consists of a module path and a resource spec.
+- Module path identifies a module, and resource spec identifies a specific resource instance within that module.
+- Index values can be used for modules and resources with multiple instances.
+- Resource addressing connects resources together by specifying dependencies in the Terraform configuration.
+
+```bash
+# An address is made up of two parts:
+[module path][resource spec]
+
+```
 
 ### 8f. [Use HCL and Terraform functions to write configuration](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Use%20HCL%20and%20Terraform%20functions%20to%20write%20configuration)
 
+- Terraform language has built-in functions for transforming and combining values.
+- Functions are called using the function name followed by comma-separated arguments.
+- User-defined functions are not supported; only built-in functions can be used.
+- Documentation provides a list of available functions and examples.
+- Functions can be tested using the Terraform expression console or terraform console command.
+
+```bash
+> max(5, 12, 9)
+12
+
+min([55, 2453, 2]...)
+
+```
+
 ### 8g. [Describe built-in dependency management (order of execution based)](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20built%2Din%20dependency%20management%20(order%20of%20execution%20based))
+
+- Terraform's built-in dependency management determines execution order based on the resource graph.
+- The graph is built by analyzing the configuration and includes resource nodes, provider configuration nodes, and resource meta-nodes.
+- Resources are added to the graph, provisioners are mapped, and explicit dependencies are created.
+- Orphan resources (present in state but not in configuration) are handled.
+- Providers are mapped, interpolations are parsed, and a root node is created.
+- Traversal of the graph follows a depth-first approach with limited parallelism.
+- Built-in dependency management ensures correct execution order, consistency, and conflict avoidance.
 
 </p>
 </details>
@@ -729,20 +837,52 @@ terraform {
 
 ## Study Guide: Understand Terraform Cloud
 
-[Title]()
-[Title]()
-[Title]()
+[What is Terraform Cloud? documentation](https://developer.hashicorp.com/terraform/cloud-docs)
+[Terraform Cloud Workflow documentation](https://developer.hashicorp.com/terraform/cloud-docs/overview#terraform-workflow)
+[Terraform Cloud Workspaces documentation](https://developer.hashicorp.com/terraform/cloud-docs/workspaces)
+[Terraform Cloud Get Started Collection tutorials](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started)
+[Manage Versions in Terraform Cloud tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-versions)
+[Use Modules from the Registry tutorial](https://developer.hashicorp.com/terraform/tutorials/modules/module-use)
+[Private Registry documentation](https://developer.hashicorp.com/terraform/cloud-docs/registry)
+[Terraform Cloud Teams documentation](https://developer.hashicorp.com/terraform/cloud-docs/users-teams-organizations/teams)
+[Manage Permissions in Terraform Cloud tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-permissions)
+[Sentinel documentation](https://developer.hashicorp.com/terraform/cloud-docs/policy-enforcement/sentinel)
+[Enforce a Policy tutorial](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/policy-quickstart)
 
 <details><summary>Review: Understand Terraform Cloud capabilities</summary>
 <p>
 
-```bash
-
-```
-
 ### 9a. [Explain how Terraform Cloud helps to manage infrastructure](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Explain%20how%20Terraform%20Cloud%20helps%20to%20manage%20infrastructure) 
 
+- Terraform Cloud is an application designed to assist teams in using Terraform for infrastructure provisioning.
+- It provides a consistent and reliable environment for running Terraform.
+- Shared state and secret data: Terraform Cloud enables easy access to shared state and secure storage for sensitive information.
+- Access controls: It offers controls for approving changes to infrastructure, allowing teams to manage permissions and ensure proper governance.
+- Private module registry: Terraform Cloud includes a private registry for sharing and managing Terraform modules within the team or organization.
+- Policy controls: Detailed policy controls enable governing the contents of Terraform configurations, ensuring compliance and best practices.
+- Collaboration and version control integration: Teams can connect Terraform to version control systems, facilitating collaboration and version management.
+- Remote state storage: Terraform Cloud securely stores remote state, eliminating the need for local storage.
+- Scalability: Paid editions of Terraform Cloud allow adding more users, creating teams, and scaling collaboration efforts.
+- Terraform Enterprise: For organizations with advanced security and compliance requirements, Terraform Enterprise offers a self-hosted version with additional features.
+
 ### 9b. [Describe how Terraform Cloud enables collaboration and governance](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003#:~:text=Describe%20how%20Terraform%20Cloud%20enables%20collaboration%20and%20governance)
+
+
+#### Teams:
+
+- Allows organizing users into teams for efficient collaboration.
+- Provides fine-grained access controls and permissions for teams.
+- Simplifies managing team membership and roles.
+
+#### Policy Enforcement with Sentinel:
+
+- Enforces policies on Terraform runs to ensure compliance with predefined rules.
+- Uses the Sentinel policy language to define policies.
+- Enables policy sets to be applied globally or on specific projects and workspaces.
+- Supports imports for accessing reusable libraries, external data, and functions.
+- Provides useful functions and idioms for writing policies.
+- Allows validation of resource attributes and evaluation of multiple conditions.
+- Helps maintain governance and security standards throughout the infrastructure lifecycle.
 
 </p>
 </details> 
