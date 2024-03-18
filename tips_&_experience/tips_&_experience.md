@@ -30,5 +30,7 @@ Go through the provided study guide (includes videos, docs, tutorials) and do th
 
 ## 2. Environment
 
-PSI experience was pretty smooth passed my exam today got the score on the PSI browser. Waiting for official score or cert. Found exam easy making sure you know the basics mostly.
+PSI experience was pretty smooth passed my exam today got the score on the PSI browser. Found exam easy making sure you know the basics mostly.
 
+
+[Badge](https://www.credly.com/badges/a3d54635-cf0e-44db-9308-9a3a280b4180/public_url)
