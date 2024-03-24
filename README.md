@@ -22,5 +22,6 @@ Terraform exams moving to Certiverse
 - May 1, 2024: first day to purchase/schedule an exam appointment in Certiverse
 
 
-# Can I PR? If there is an error/an alternative way/add questions/solution I can offer
-Absolutely! Feel free to PR and edit/add questions and solutions, but please stick to the existing format.
+# Are you thinking to do PR? If you feel there is an error or something can be improved or more questions or solutions can be provided
+Surely feel free to PR and edit/add questions and solutions, but please stick to the existing format.
+
