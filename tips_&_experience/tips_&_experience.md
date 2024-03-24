@@ -1,4 +1,4 @@
-# Tips (Under Progress)
+# Tips
 
 ## Terraform Exam Tips
 
