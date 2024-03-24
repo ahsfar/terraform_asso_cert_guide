@@ -21,7 +21,7 @@ Terraform exams moving to Certiverse
 - April 30, 2024: last day to take an exam in PSI
 - May 1, 2024: first day to purchase/schedule an exam appointment in Certiverse
 
-
-# Are you thinking to do PR? If you feel there is an error or something can be improved or more questions or solutions can be provided
+# PR?
+## Are you thinking to do PR? If you feel there is an error or something can be improved or more questions or solutions can be provided
 Surely feel free to PR and edit/add questions and solutions, but please stick to the existing format.
 
